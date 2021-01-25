@@ -15,6 +15,16 @@
 	display: flex;
 	justify-content: center;
 }
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	margin:0 auto;
+	background-color: #222831;
+	text-align: center;
+	vertical-align: middle;
+}
 .grid {
 	margin:2vh;
 	display:flex;
