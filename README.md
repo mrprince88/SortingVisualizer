@@ -1,3 +1,4 @@
 # Sorting Visualizer Using VanillaJS
 
-[!Screenshot.png]
+ ![Screenshot](Screenshot.png)
+
