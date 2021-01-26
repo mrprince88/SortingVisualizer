@@ -28,6 +28,7 @@ function draw() {
         if (isOverflown(grid)) {
             slider1.max = i;
             slider.value = i;
+            n = i;
             break;
         }
         let num = document.createElement('div');
@@ -54,6 +55,13 @@ window.onload = updateArray();
 async function wait() {
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => resolve("done"), 1000 / slider2.value);
+    });
+    let res = await promise;
+}
+
+async function waitforSort() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done"), 100);
     });
     let res = await promise;
 }
