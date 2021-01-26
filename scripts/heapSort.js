@@ -1,5 +1,5 @@
 async function heapSort() {
-    for (let i = n / 2 - 1; i >= 0; i--) {
+    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
         updateOne(i, 'pointer2');
         await wait();
         await siftDown(n, i);
