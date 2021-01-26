@@ -1,4 +1,5 @@
 # Sorting Visualizer Using VanillaJS
 
- ![Screenshot](Screenshot.png)
+Check it out: https://mrprince88.github.io/SortingVisualizer/index.html
 
+ ![Screenshot](Screenshot.png)

@@ -12,6 +12,10 @@ let nums;
 let n;
 let newArr = [];
 
+function isOverflown(element) {
+    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
 function draw() {
 
     for (let i = 0; i < slider1.value; i++) {
@@ -19,13 +23,17 @@ function draw() {
         newArr.push(arr[i]);
     }
     newArr.sort((a, b) => a - b);
-    console.log(newArr);
     n = arr.length;
     for (let i = 0; i < n; i++) {
+        if (isOverflown(grid)) {
+            slider1.max = i;
+            slider.value = i;
+            break;
+        }
         let num = document.createElement('div');
         let arrEntry = document.createElement('div');
         const h = arr[i],
-            w = 80 / n;
+            w = 75 / n;
         num.classList.add('number');
         num.style.height = h + "vh";
         num.style.width = w + "vw";
@@ -55,6 +63,13 @@ async function colorUp() {
         nums[i].classList.add('sorted');
         await wait();
     }
+}
+
+function removeColor() {
+    if (!nums[0].classList.contains('sorted'))
+        return;
+    for (let i = 0; i < n; i++)
+        nums[i].classList.remove('sorted');
 }
 
 function removeOne(i) {
@@ -107,6 +122,7 @@ function enableAllButtons() {
 
 navbuttons.forEach(i => {
     i.addEventListener('click', () => {
+        removeColor();
         switch (i.id) {
             case '1':
                 lockAllButtons();

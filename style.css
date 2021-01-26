@@ -1,14 +1,17 @@
 .navbar {
-	background-color:#222831;
+	background-color:#1b262c;
+}
+.body {
+	background-color:#bbe1fa;
 }
 
 .heading {
-	font-size:4rem;
+	font-size:3rem;
 	margin-right:40vw;
 }
 
 .sliders{
-	margin-left: 4vw;
+	margin-left: 3vw;
 }
 
 .board {
@@ -21,12 +24,12 @@
 	width: 100%;
 	color: white;
 	margin:0 auto;
-	background-color: #222831;
+	background-color: #1b262c;
 	text-align: center;
 	vertical-align: middle;
 }
 .grid {
-	margin:2vh;
+	margin:3vh;
 	display:flex;
 	height: 70vh;
 	width:75vw;
@@ -37,7 +40,7 @@
 	align-self: flex-end;
 	border: 2.5px solid white;
 	border-bottom:0;
-	background-color:#005086;
+	background-color:#3282b8;
 }
 button {
 	margin:10px;
@@ -55,5 +58,5 @@ button {
 }
 
 .sorted {
-	background-color:#48426d;
+	background-color:#0f4c75;
 }
