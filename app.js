@@ -27,7 +27,7 @@ function draw() {
     for (let i = 0; i < n; i++) {
         if (isOverflown(grid)) {
             slider1.max = i;
-            slider.value = i;
+            slider1.value = i;
             n = i;
             break;
         }
