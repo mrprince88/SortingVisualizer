@@ -12,25 +12,22 @@ let nums;
 let n;
 let newArr = [];
 
-function isOverflown(element) {
-    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-}
-
 function draw() {
 
     for (let i = 0; i < slider1.value; i++) {
         arr.push(Math.floor(Math.random() * (70 - 1) + 2));
-        newArr.push(arr[i]);
     }
-    newArr.sort((a, b) => a - b);
     n = arr.length;
     for (let i = 0; i < n; i++) {
+
+        //for small screens
         if (isOverflown(grid)) {
             slider1.max = i;
             slider1.value = i;
             n = i;
             break;
         }
+
         let num = document.createElement('div');
         let arrEntry = document.createElement('div');
         const h = arr[i],
@@ -41,6 +38,10 @@ function draw() {
         grid.appendChild(num);
     }
     nums = document.querySelectorAll('.number');
+}
+
+function isOverflown(element) {
+    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
 
 function updateArray() {
